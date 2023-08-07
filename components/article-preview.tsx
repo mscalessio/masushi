@@ -7,7 +7,7 @@ export default function ArticlePreview({ article }: { article: ArticleType }) {
     <article className="relative flex flex-col items-start group">
       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
         <div className="absolute z-0 transition scale-95 opacity-0 -inset-x-4 -inset-y-6 bg-zinc-50 group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-        <Link href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
+        <Link prefetch href={`/articles/${article.slug}`}>
           <span className="absolute z-20 -inset-x-4 -inset-y-6 sm:-inset-x-6 sm:rounded-2xl"></span>
           <span className="relative z-10">{article.title}</span>
         </Link>
